@@ -98,9 +98,9 @@ header,section {
 }
 
 blockquote {
-	font-style: italic;
-    border-left: 5px solid #ececec;
-    padding-left: 1rem;
+  font-style: italic;
+  border-left: 5px solid #ececec;
+  padding-left: 1rem;
 }
 
 h1,h2,h3,h4,h5 {
@@ -168,22 +168,22 @@ main {
 
 @media screen and (max-width: 45rem ) {
 header li {
-    display: inline;
-	margin-right: 1rem;
+  display: inline;
+  margin-right: 1rem;
 }
 .logo {
-	padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 header ul {
-	border-bottom: 1px solid #edf2f7;
-	padding-bottom: 2rem;
+  border-bottom: 1px solid #edf2f7;
+  padding-bottom: 2rem;
 }
 nav ul {
-    border-right: 0px;
+  order-right: 0px;
 }
 
 .photos ul {
-	margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 }
