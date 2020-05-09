@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "..."
+title:  "Просто оскорбительно..."
 date:   0000-00-00 00:54:40 +0700
-categories: jekyll update
+categories: blog hello
+tags: [image]
 ---
 
 ![Вот так](/images/0000-00-00-hello-sadly.jpg)

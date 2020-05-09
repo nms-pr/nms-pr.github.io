@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Внутри поста цифра - 1"
+date:   0001-00-00 00:54:40 +0700
+categories: blog hello
+---
+
+1

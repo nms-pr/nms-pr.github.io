@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Course
-permalink: /course/
+title: course
 ---
 
 [первоисточник](https://dictionary.cambridge.org/ru/словарь/английский/course)

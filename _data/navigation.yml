@@ -1,0 +1,11 @@
+links:
+- title: Posts
+  url: /
+- title: Course
+  url: /course
+- title: About
+  url: /about
+- title: Search
+  url: /search
+- title: Rss
+  url: /atom.xml
