@@ -1,17 +1,36 @@
----
-layout: null
----
 [
-  {% for post in site.posts %}
+  
     {
 
-      "title"    : "{{ post.title | strip_html | escape }}",
-      "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "category" : "{{post.categories | join: ', '}}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
-      "date"     : "{{ post.date }}",
-      "discription" : "{{post.description | strip_html | strip_newlines | escape }}"
+      "title"    : "Длинный пост",
+      "url"      : "/1900/01/15/long",
+      "category" : "blog, hello",
+      "tags"     : "",
+      "date"     : "1900-01-15 22:44:40 +0700",
+      "discription" : ""
 
-    } {% unless forloop.last %},{% endunless %}
-  {% endfor %}
+    } ,
+  
+    {
+
+      "title"    : "Внутри поста цифра - 1",
+      "url"      : "/0001/01/01/hello",
+      "category" : "blog, hello",
+      "tags"     : "",
+      "date"     : "0001-01-01 00:54:40 +0700",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Просто оскорбительно...",
+      "url"      : "/0000/01/01/hello",
+      "category" : "blog, hello",
+      "tags"     : "image",
+      "date"     : "0000-01-01 00:54:40 +0700",
+      "discription" : ""
+
+    } 
+  
 ]

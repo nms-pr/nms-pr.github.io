@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>/about</loc>
+<lastmod>2020-05-10T00:14:15+07:00</lastmod>
+</url>
+<url>
+<loc>/course</loc>
+<lastmod>2020-05-10T00:14:15+07:00</lastmod>
+</url>
+<url>
+<loc>/search</loc>
+<lastmod>2020-05-10T00:14:15+07:00</lastmod>
+</url>
+<url>
+<loc>/0000/01/01/hello</loc>
+<lastmod>0000-01-01T00:54:40+07:00</lastmod>
+</url>
+<url>
+<loc>/0001/01/01/hello</loc>
+<lastmod>0001-01-01T00:54:40+07:00</lastmod>
+</url>
+<url>
+<loc>/1900/01/15/long</loc>
+<lastmod>1900-01-15T22:44:40+07:00</lastmod>
+</url>
+<url>
+<loc>/</loc>
+</url>
+<url>
+<loc>/tag/image/</loc>
+</url>
+</urlset>
