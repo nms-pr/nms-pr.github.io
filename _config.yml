@@ -37,6 +37,10 @@ sass:
   sass_dir: _sass
   style: :compressed
 
+extlinks:
+  attributes: {rel: nofollow, target: _blank}
+  rel_exclude: []
+
 # Build settings
 # theme: minima
 plugins:
@@ -44,6 +48,7 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-extlinks
 
 collections:
   pages:
