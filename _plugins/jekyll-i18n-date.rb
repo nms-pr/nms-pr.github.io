@@ -11,37 +11,37 @@ module Jekyll
     #   {{ post.date | localize: ":short" }}
     def localize(input, format = nil, locale = nil)
 
-			# Side effects: changes I18n.config, must run before current_locale is set
+      # Side effects: changes I18n.config, must run before current_locale is set
       load_translations
 
-			input = Time.at(input) if input.class == Integer
+      input = Time.at(input) if input.class == Integer
 
       format = format =~ /^:(\w+)/ ? Regexp.last_match(1).to_sym : format
 
-			if input && locale = current_locale(locale)
+      if input && locale = current_locale(locale)
 
-				I18n.locale = locale
-				I18n.l(input, format: format)
-			else
-				input
-			end
-		end
+        I18n.locale = locale
+        I18n.l(input, format: format)
+      else
+        input
+      end
+    end
 
     def load_translations
       return false unless I18n.backend.send(:translations).empty?
       filename = File.join(File.dirname(__FILE__), '../_locales/*.yml')
-			I18n.backend.load_translations Dir[filename]
+      I18n.backend.load_translations Dir[filename]
     end
 
-		def current_locale(locale)
-			l = locale || @context.registers[:page]["lang"] || @context.registers[:site].config["lang"]
+    def current_locale(locale)
+      l = locale || @context.registers[:page]["lang"] || @context.registers[:site].config["lang"]
 
-			if l && I18n.config.available_locales.include?(l.to_sym)
-				l
-			else
-				false
-			end
-		end
+      if l && I18n.config.available_locales.include?(l.to_sym)
+        l
+      else
+        false
+      end
+    end
 
   end
 end
