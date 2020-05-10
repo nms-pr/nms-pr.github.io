@@ -2,7 +2,6 @@
 layout: post
 title:  "Просто оскорбительно..."
 date:   0000-00-00 00:54:40 +0700
-categories: blog hello
 tags: [image]
 ---
 

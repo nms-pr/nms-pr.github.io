@@ -5,5 +5,5 @@ links:
   url: /course
 - title: About
   url: /about
-- title: Search
-  url: /search
+# - title: Search
+  # url: /search

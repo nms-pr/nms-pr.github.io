@@ -2,7 +2,6 @@
 layout: post
 title:  "Длинный пост"
 date:   1900-01-15 22:44:40 +0700
-categories: blog hello
 ---
 
 Lorem ipsum dolor sit amet, dignissim ultrices a sit lacus. Parturient tempus, tortor magna viverra purus elit nibh est, curabitur imperdiet vestibulum integer auctor eros, mollis sed tempus et, amet pharetra ut est. Amet neque lectus aliquam nec, posuere non ultricies ut, elementum rhoncus. Ultricies arcu est, justo duis mus lectus, senectus non ultrices arcu. Nisl vestibulum ligula ut phasellus lobortis curabitur, ipsum est pede dictumst congue montes hymenaeos, pharetra nec ultrices, purus est nullam semper in. Id eget at metus sit molestie dolor, aliquam ornare mauris in. Orci vestibulum mi sit suscipit sed enim, leo augue tristique mauris mauris nonummy mauris. Aliquam elementum vel nunc penatibus at. Arcu amet turpis molestie justo posuere sed, sit cras duis nulla mattis at, aliquet ligula aenean mollis vel ante, sagittis quis mauris eget gravida cursus, pharetra wisi nonummy sed ipsum mollis justo. Nunc condimentum diam etiam id odit suspendisse, lorem nam. Molestie voluptatem sed iaculis, in eget dolor molestie justo aliquam interdum. Augue a pede ridiculus vel.
