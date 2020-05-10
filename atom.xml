@@ -4,7 +4,7 @@
  <title>Всем приветы в этом чате</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2020-05-10T21:39:40+07:00</updated>
+ <updated>2020-05-10T21:41:30+07:00</updated>
  <id></id>
  <author>
    <name></name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Длинный пост</title>
-   <link href="/1900/01/15/long"/>
+   <link href="/post/1900/01/15/long"/>
    <updated>1900-01-15T22:44:40+07:00</updated>
-   <id>/1900/01/15/long</id>
+   <id>/post/1900/01/15/long</id>
    <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, dignissim ultrices a sit lacus. Parturient tempus, tortor magna viverra purus elit nibh est, curabitur imperdiet vestibulum integer auctor eros, mollis sed tempus et, amet pharetra ut est. Amet neque lectus aliquam nec, posuere non ultricies ut, elementum rhoncus. Ultricies arcu est, justo duis mus lectus, senectus non ultrices arcu. Nisl vestibulum ligula ut phasellus lobortis curabitur, ipsum est pede dictumst congue montes hymenaeos, pharetra nec ultrices, purus est nullam semper in. Id eget at metus sit molestie dolor, aliquam ornare mauris in. Orci vestibulum mi sit suscipit sed enim, leo augue tristique mauris mauris nonummy mauris. Aliquam elementum vel nunc penatibus at. Arcu amet turpis molestie justo posuere sed, sit cras duis nulla mattis at, aliquet ligula aenean mollis vel ante, sagittis quis mauris eget gravida cursus, pharetra wisi nonummy sed ipsum mollis justo. Nunc condimentum diam etiam id odit suspendisse, lorem nam. Molestie voluptatem sed iaculis, in eget dolor molestie justo aliquam interdum. Augue a pede ridiculus vel.&lt;/p&gt;
 
 &lt;p&gt;Turpis ac amet fermentum ullamcorper, eu varius vitae at euismod quisque urna, id leo sit sit, sem ultrices qui hymenaeos quisque vel, imperdiet sed. Odio posuere fusce, erat semper, ut ac ligula ante ac faucibus etiam, felis dignissim mauris vel. Eget class amet amet. Nunc wisi. Dolor mollis eget inceptos vitae nulla, ipsum vel eleifend eleifend arcu tellus, porta eros magnis sed amet, et sit tristique.&lt;/p&gt;
@@ -45,18 +45,18 @@
  
  <entry>
    <title>Внутри поста цифра - 1</title>
-   <link href="/0001/01/01/hello"/>
+   <link href="/post/0001/01/01/hello"/>
    <updated>0001-01-01T00:54:40+07:00</updated>
-   <id>/0001/01/01/hello</id>
+   <id>/post/0001/01/01/hello</id>
    <content type="html">&lt;p&gt;1&lt;/p&gt;
 </content>
  </entry>
  
  <entry>
    <title>Просто оскорбительно...</title>
-   <link href="/0000/01/01/hello"/>
+   <link href="/post/0000/01/01/hello"/>
    <updated>0000-01-01T00:54:40+07:00</updated>
-   <id>/0000/01/01/hello</id>
+   <id>/post/0000/01/01/hello</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/0000-00-00-hello-sadly.jpg&quot; alt=&quot;Вот так&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>

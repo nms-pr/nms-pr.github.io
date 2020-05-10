@@ -3,8 +3,8 @@
     {
 
       "title"    : "Длинный пост",
-      "url"      : "/1900/01/15/long",
-      "category" : "blog, hello",
+      "url"      : "/post/1900/01/15/long",
+      "category" : "",
       "tags"     : "",
       "date"     : "1900-01-15 22:44:40 +0700",
       "discription" : ""
@@ -14,8 +14,8 @@
     {
 
       "title"    : "Внутри поста цифра - 1",
-      "url"      : "/0001/01/01/hello",
-      "category" : "blog, hello",
+      "url"      : "/post/0001/01/01/hello",
+      "category" : "",
       "tags"     : "",
       "date"     : "0001-01-01 00:54:40 +0700",
       "discription" : ""
@@ -25,8 +25,8 @@
     {
 
       "title"    : "Просто оскорбительно...",
-      "url"      : "/0000/01/01/hello",
-      "category" : "blog, hello",
+      "url"      : "/post/0000/01/01/hello",
+      "category" : "",
       "tags"     : "image",
       "date"     : "0000-01-01 00:54:40 +0700",
       "discription" : ""
