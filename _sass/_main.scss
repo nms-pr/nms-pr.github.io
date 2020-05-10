@@ -16,7 +16,7 @@ body {
 }
 
 nav ul {
-    border-right: 1px solid #edf2f7;
+    border-right: 1px solid #0000ff;
 }
 
 a {
@@ -175,7 +175,7 @@ header li {
   padding-bottom: 1rem;
 }
 header ul {
-  border-bottom: 1px solid #edf2f7;
+  border-bottom: 1px solid #ff0000;
   padding-bottom: 2rem;
 }
 nav ul {
@@ -200,9 +200,8 @@ figcaption {
     font-size: smaller;
 }
 
-footer {
-  max-width:60rem;
-  margin:2rem auto;
-  padding:1rem;
+.footer_wrapper {
+  margin: 1rem;
   text-align: right;
+  border-top: 1px solid #00aa00;
 }
