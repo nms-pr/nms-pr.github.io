@@ -16,7 +16,7 @@ body {
 }
 
 nav ul {
-    border-right: 1px solid #0000ff;
+
 }
 
 a {
@@ -28,6 +28,10 @@ a {
 pre {
   margin: .5rem 0;
   padding: .5rem;
+}
+
+.post, .posts {
+  background-color: #fafafa
 }
 
 .post p {
@@ -94,7 +98,8 @@ header a.active {
 }
 
 header,section {
-  padding:1rem;
+  padding: 1rem;
+  padding-bottom: 0;
 }
 
 blockquote {
@@ -161,8 +166,8 @@ main {
   display:flex;
   flex-wrap:wrap;
   max-width:60rem;
-  margin:2rem auto;
-  padding:1rem;
+  margin: auto;
+  margin-top: 2rem;
 }
 
 
@@ -175,7 +180,6 @@ header li {
   padding-bottom: 1rem;
 }
 header ul {
-  border-bottom: 1px solid #ff0000;
   padding-bottom: 2rem;
 }
 nav ul {
@@ -200,8 +204,25 @@ figcaption {
     font-size: smaller;
 }
 
+footer {
+  display:flex;
+  flex-wrap:wrap;
+  max-width:60rem;
+  margin: auto;
+  margin-top: 0;
+}
+
 .footer_wrapper {
-  margin: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: .8rem;
+}
+
+.footer_description {
   text-align: right;
-  border-top: 1px solid #00aa00;
+}
+
+.footer_copyright {
+  margin: 1rem;
+  text-align: center;
 }
