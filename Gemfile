@@ -33,4 +33,5 @@ gem 'jekyll-seo-tag'
 gem 'jekyll-sitemap'
 gem 'jekyll-extlinks'
 
+gem 'jgd' #bundle exec jgd -b master -r dev
 gem 'nokogiri'
