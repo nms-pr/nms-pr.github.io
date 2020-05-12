@@ -1,47 +1,28 @@
 <footer class="footer">
   <div class="columns">
     <div class="column">
-      <h1 class="title is-size-4">Meta</h1>
-      <a href="#">Imprint</a>
-    </div>
-
-    <div class="column">
-      <h1 class="title is-size-4">Latest Posts</h1>
-      <ul>
-        {%- for post in site.posts limit:5 -%}
-          <li href="{{ post.url | prepend: site.baseurl }}">
-            {{ post.title | truncate: 35 }}
-          </li>
-        {%- endfor -%}
-      </ul>
-    </div>
-
-    <div class="column">
-      <h1 class="title title is-size-4">Title</h1>
-      <a href="#">Link</a>
-    </div>
-
-    <div class="column">
-      <h1 class="title title is-size-4">Title</h1>
       <ul>
         <li>
           <span class="icon">
             <i class="las la-envelope"></i>
           </span>
-          mail@example.com
+          почта
         </li>
         <li>
           <span class="icon">
             <i class="lab la-twitter"></i>
           </span>
-          @twitter-handle
+          твиттер
         </li>
       </ul>
+    </div>
+    <div class="column has-text-right">
+      {{ site.description }}
     </div>
   </div>
 
   <div class="has-text-centered">
-    {{ site.title }} | &nbsp;
+    {{ site.title }} | &nbsp; {{ site.copyright }}
   </div>
 </footer>
 

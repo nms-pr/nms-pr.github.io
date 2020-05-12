@@ -2,15 +2,16 @@
 layout: default
 ---
 
-<h2>{{ page.title }}</h2>
-<span class="post_meta">
+<h4 class="title is-4">{{ page.title }}</h4>
+<h6 class="subtitle is-6">
   <time datetime="{{ page.date | date_to_xmlschema }}">
     {{ page.date | localize: "%d %b %Y" }}
   </time>
-  |
+  &nbsp;|&nbsp;
+
   {{ content | reading_time }}
   {%- if page.tags.size > 0 -%}
-    |
+    &nbsp;|&nbsp;
     {% for tag in page.tags %}
       <a href="/tag/{{tag}}">
         {{tag}}
@@ -20,6 +21,6 @@ layout: default
   {%- endif -%}
   <br>
 
-</span>
+</h6>
 
 {{ content }}

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: course
+title: Course
 ---
 
 [первоисточник](https://dictionary.cambridge.org/ru/словарь/английский/course)
