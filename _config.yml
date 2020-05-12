@@ -52,7 +52,8 @@ reading_time:
   minute_plural: "минут"
 
 # Build settings
-# theme: minima
+theme: jekyll-bulma
+
 plugins:
   - jekyll-feed
   - jekyll-paginate

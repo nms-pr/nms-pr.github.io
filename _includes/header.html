@@ -1,0 +1,29 @@
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      Всем приветы в этом чате
+    </a>
+
+    <a role="button"
+       class="navbar-burger"
+       data-target="navMenu"
+       aria-label="menu"
+       aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu" id="navMenu">
+    <div class="navbar-start">
+      {% for item in site.data.navigation.links %}
+         <div class="navbar-item">
+           <a href="{{ item.url }}" {% if item.url == page.url %} class="active"{% endif %}>
+             {{ item.title }}
+           </a>
+         </div>
+      {% endfor %}
+    </div>
+  </div>
+</nav>
