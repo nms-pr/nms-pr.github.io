@@ -1,4 +1,4 @@
-<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+<nav class="navbar is-black" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
       Всем приветы в этом чате
@@ -18,11 +18,9 @@
   <div class="navbar-menu" id="navMenu">
     <div class="navbar-start">
       {% for item in site.data.navigation.links %}
-         <div class="navbar-item">
-           <a href="{{ item.url }}" {% if item.url == page.url %} class="active"{% endif %}>
-             {{ item.title }}
-           </a>
-         </div>
+         <a class="navbar-item" href="{{ item.url }}">
+           {{ item.title }}
+         </a>
       {% endfor %}
     </div>
   </div>

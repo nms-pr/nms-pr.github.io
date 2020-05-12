@@ -16,7 +16,9 @@
 
   <link href="{{ '/assets/fonts/ubuntu/ubuntu-v11-latin-ext_latin-regular.woff' | prepend:site.baseurl }}"
         rel='stylesheet'
-        type='text/css'>
+        type='font/woff'>
+
+
   <link rel="stylesheet"
         href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
   <link rel="canonical"
@@ -31,12 +33,6 @@
   <!-- custom -->
   <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.png">
   <link rel="sitemap" type="application/xml" title="sitemap" href="{{ site.baseurl }}/sitemap.xml" />
-  <style>
-    {% capture include_to_scssify %}
-      {% include inline.scss %}
-    {% endcapture %}
-    {{ include_to_scssify | scssify }}
-  </style>
 
   {%- if jekyll.environment == 'production' -%}
     {%- if site.google-analytics -%}
