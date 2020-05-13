@@ -32,7 +32,6 @@ gem 'jekyll-paginate'
 gem 'jekyll-seo-tag'
 gem 'jekyll-sitemap'
 gem 'jekyll-extlinks'
-gem 'jekyll-bulma'
 
 gem 'jgd' #bundle exec jgd -b master -r dev
 gem 'nokogiri'

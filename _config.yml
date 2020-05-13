@@ -52,7 +52,6 @@ reading_time:
   minute_plural: "минут"
 
 # Build settings
-theme: jekyll-bulma
 
 plugins:
   - jekyll-feed
