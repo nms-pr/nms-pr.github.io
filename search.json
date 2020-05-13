@@ -5,7 +5,7 @@
       "title"    : "Длинный пост",
       "url"      : "/post/1900/01/15/long",
       "category" : "",
-      "tags"     : "",
+      "tags"     : "психология, продуктивность",
       "date"     : "1900-01-15 22:44:40 +0700",
       "discription" : ""
 
@@ -14,9 +14,9 @@
     {
 
       "title"    : "Внутри поста цифра - 1",
-      "url"      : "/post/0001/01/01/hello",
+      "url"      : "/post/0001/01/01/one",
       "category" : "",
-      "tags"     : "",
+      "tags"     : "психология",
       "date"     : "0001-01-01 00:54:40 +0700",
       "discription" : ""
 
@@ -25,9 +25,9 @@
     {
 
       "title"    : "Просто оскорбительно...",
-      "url"      : "/post/0000/01/01/hello",
+      "url"      : "/post/0000/01/01/image",
       "category" : "",
-      "tags"     : "image",
+      "tags"     : "image, test",
       "date"     : "0000-01-01 00:54:40 +0700",
       "discription" : ""
 
