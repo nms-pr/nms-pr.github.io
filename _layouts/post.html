@@ -1,54 +1,50 @@
 ---
 layout: default
 ---
+<div class="list-group">
+  <li class="list-group-item">
+    <h2> {{ page.title }} </h2>
 
-<div>
-  <h1>{{ page.title }}</h1>
+    <p class="text-muted">
+      <small>
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ page.date | localize: "%d %b %Y" }}
+        </time>
+        {% if page.type == 'text' %}
 
-  <!-- <p> -->
-    <small class="text-muted">
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | localize: "%d %b %Y" }}
-      </time>
-      &nbsp;|&nbsp;
-      {{ content | reading_time }}
-    </small>
-  <!-- </p> -->
+          &nbsp;|&nbsp;
+          {{ page.content | reading_time }}
 
-    {%- if page.tags.size > 0 -%}
-    <!-- <p> -->
-        {% for tag in page.tags %}
-          <a href="/tag/{{tag}}" class="badge badge-warning" role="button">
-            {{tag}}
-          </a>
-        {% unless forloop.last %} &nbsp; {% endunless %}
-      {% endfor %}
-      <!-- </p> -->
-    {%- endif -%}
+        {% endif %}
 
-</div>
-
-<div>
-  <p>
-    {{ content }}
-  </p>
-</div>
-
-<div>
-  {% if page.previous %}
-  <p>
-    Предыдущий пост:
-    <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
-  </p>
-  {% endif %}
-
-  {% if page.next %}
-  <div class="">
-    <p>
-      Cледующий пост:
-      <a href="{{ page.next.url }}">{{ page.next.title }}</a>
+      {%- if page.tags.size > 0 -%}
+          &nbsp;
+          {% for tag in page.tags %}
+            <a href="/tag/{{tag}}" class="badge badge-warning" role="button">
+              {{tag}}
+            </a>
+          {% unless forloop.last %} &nbsp; {% endunless %}
+        {% endfor %}
+      {%- endif -%}
+      </small>
     </p>
-  </div>
-  {% endif %}
 
+    <p>
+      {{ content }}
+    </p>
+
+    <div class="p-3 mb-2 btn-group-vertical">
+      {% if page.previous %}
+        <a href="{{ page.previous.url }}"
+        class="btn btn-outline-secondary btn-group-sm"
+        >Ранее: {{ page.previous.title }}</a>
+      {% endif %}
+
+      {% if page.next %}
+        <a href="{{ page.next.url }}"
+        class="btn btn-outline-secondary btn-group-sm"
+        >Далее: {{ page.next.title }}</a>
+      {% endif %}
+    </div>
+  </li>
 </div>
