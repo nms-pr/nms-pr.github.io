@@ -2,16 +2,18 @@
 
   <a class="navbar-brand" href="/">Всем приветы в этом чате</a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      {% for item in site.data.navigation.links %}
-           <a class="nav-item nav-link" href="{{ item.url }}">
-             {{ item.title }}
-           </a>
-      {% endfor %}
+  {% if site.data.navigation %}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        {% for item in site.data.navigation.links %}
+             <a class="nav-item nav-link" href="{{ item.url }}">
+               {{ item.title }}
+             </a>
+        {% endfor %}
+      </div>
     </div>
-  </div>
+  {% endif %}
 </nav>
