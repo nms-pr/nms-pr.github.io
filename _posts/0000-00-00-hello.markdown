@@ -2,7 +2,12 @@
 layout: post
 title:  "Просто оскорбительно..."
 date:   0000-00-00 00:54:40 +0700
-tags: [image]
+tags: ['image', 'test']
+type: image
 ---
+
+Внутри картинка
+
+<!--more-->
 
 ![Вот так](/images/0000-00-00-hello-sadly.jpg)
