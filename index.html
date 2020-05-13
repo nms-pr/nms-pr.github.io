@@ -2,22 +2,4 @@
 layout: default
 ---
 
-
-  <ol type="1">
-    {% for post in site.posts %}
-    <li>
-      <h4 class="title is-4">
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-        </a>
-      </h4>
-      <h6 class="subtitle is-6">
-        <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | localize: "%d %b %Y" }}
-        </time>
-        &nbsp;|&nbsp;
-        {{ post.content | reading_time }}
-      </h6>
-    </li>
-    {% endfor %}
-  </ol>
+{% include home.html %}
