@@ -2,25 +2,51 @@
 layout: default
 ---
 
-<h4 class="title is-4">{{ page.title }}</h4>
-<h6 class="subtitle is-6">
-  <time datetime="{{ page.date | date_to_xmlschema }}">
-    {{ page.date | localize: "%d %b %Y" }}
-  </time>
-  &nbsp;|&nbsp;
+<div>
+  <div>
+    <h1>{{ page.title }}</h1>
 
-  {{ content | reading_time }}
-  {%- if page.tags.size > 0 -%}
-    &nbsp;|&nbsp;
-    {% for tag in page.tags %}
-      <a href="/tag/{{tag}}">
-        {{tag}}
-      </a>
-      {% unless forloop.last %}, {% endunless %}
-    {% endfor %}
-  {%- endif -%}
-  <br>
+    <p>
+      <small>
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | localize: "%d %b %Y" }}
+        </time>
+        &nbsp;|&nbsp;
+        {{ content | reading_time }}
 
-</h6>
+        {%- if page.tags.size > 0 -%}
+          &nbsp;|&nbsp;
+          {% for tag in page.tags %}
+            <a href="/tag/{{tag}}">
+              {{tag}}
+            </a>
+            {% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        {%- endif -%}
+      </small>
+    </p>
+  </div>
 
-{{ content }}
+  <div>
+    {{ content }}
+  </div>
+
+  <div>
+    {% if page.previous %}
+    <p>
+      Предыдущий пост:
+      <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+    </p>
+    {% endif %}
+
+    {% if page.next %}
+    <div class="">
+      <p>
+        Cледующий пост:
+        <a href="{{ page.next.url }}">{{ page.next.title }}</a>
+      </p>
+    </div>
+    {% endif %}
+
+  </div>
+</div>
