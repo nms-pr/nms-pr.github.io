@@ -3,42 +3,12 @@
   {% include head.html %}
 
   <body class="c-body">
-    <nav class="navbar is-success" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          Всем приветы в этом чате
-        </a>
-      </div>
-    </nav>
 
-    {% include main.html %}
+    {% include navigation.html %}
 
-    <footer class="footer">
-      <div class="columns">
-        <div class="column">
-          <ul>
-            <li>
-              <span class="icon">
-                <i class="las la-envelope"></i>
-              </span>
-              почта
-            </li>
-            <li>
-              <span class="icon">
-                <i class="lab la-twitter"></i>
-              </span>
-              твиттер
-            </li>
-          </ul>
-        </div>
-        <div class="column has-text-right">
-          {{ site.description }}
-        </div>
-      </div>
+    {{ content }}
 
-      <div class="has-text-centered">
-        {{ site.title }} | &nbsp; {{ site.copyright }}
-      </div>
-    </footer>
+    {% include footer.html %}
+
   </body>
 </html>
