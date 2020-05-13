@@ -10,4 +10,4 @@ type: image
 
 <!--more-->
 
-![Вот так](/images/0000-00-00-hello-sadly.jpg)
+![Вот так](/images/0000-00-00-hello-sadly.jpg){:height="100%" width="100%"}
