@@ -3,14 +3,57 @@
   {% include head.html %}
 
   <body class="c-body">
-    {% include header.html %}
-
-    <section class="section">
-      <div class="container content">
-        {{ content }}
+    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          Всем приветы в этом чате
+        </a>
       </div>
-    </section>
+    </nav>
 
-    {% include footer.html %}
+    <main class="bd-main">
+      <div class="columns">
+        <div class="column is-one-quarter">
+                {% for item in site.data.navigation.links %}
+                   <a class="navbar-item" href="{{ item.url }}">
+                     {{ item.title }}
+                   </a>
+                {% endfor %}
+        </div>
+
+        <div class="column">
+          {{ content }}
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="columns">
+        <div class="column">
+          <ul>
+            <li>
+              <span class="icon">
+                <i class="las la-envelope"></i>
+              </span>
+              почта
+            </li>
+            <li>
+              <span class="icon">
+                <i class="lab la-twitter"></i>
+              </span>
+              твиттер
+            </li>
+          </ul>
+        </div>
+        <div class="column has-text-right">
+          {{ site.description }}
+        </div>
+      </div>
+
+      <div class="has-text-centered">
+        {{ site.title }} | &nbsp; {{ site.copyright }}
+      </div>
+    </footer>
   </body>
 </html>
