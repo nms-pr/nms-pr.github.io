@@ -38,7 +38,7 @@ compress_html:
   comments: ["<!-- ", " -->"]
 
 sass:
-  sass_dir: _sass
+  sass_dir: assets/css
   style: :compressed
 
 extlinks:
