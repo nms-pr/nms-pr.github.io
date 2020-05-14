@@ -77,10 +77,10 @@ layout: default
         </ul>
         <ul class="list-inline">
           <li class="list-inline-item">
-          Скопировать ссылку:
-          </li>
-          <li class="list-inline-item" onclick="copyLinkToClipboad()">
-              <img id="copy" src="/images/icons/social/link.svg" width="20" height="20" title="{{shared_link}}"/>
+            <button type="button" class="btn btn-outline-dark"
+              title="{{shared_link}}" onclick="copyLinkToClipboad()">
+              Скопировать ссылку
+              <img id="copy" src="/images/icons/social/link.svg" />
               <script>
                 function copyLinkToClipboad() {
                   var $temp = $("<input>");
@@ -90,6 +90,11 @@ layout: default
                   $temp.remove();
                 }
               </script>
+            </button>
+
+          </li>
+          <li class="list-inline-item" ">
+
           </li>
         </ul>
         <hr/>
