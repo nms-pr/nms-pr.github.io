@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Всем приветы в этом чате</title>
- <link href="/atom.xml" rel="self"/>
- <link href="/"/>
- <updated>2020-05-14T23:09:19+07:00</updated>
- <id></id>
+ <link href="https://nms-pr.github.io/atom.xml" rel="self"/>
+ <link href="https://nms-pr.github.io/"/>
+ <updated>2020-05-14T23:29:49+07:00</updated>
+ <id>https://nms-pr.github.io</id>
  <author>
    <name></name>
    <email></email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Заголовок с очень большим и длинным названием которые никуда не влезет</title>
-   <link href="/post/2012/07/20/title"/>
+   <link href="https://nms-pr.github.io/post/2012/07/20/title"/>
    <updated>2012-07-20T16:53:40+07:00</updated>
-   <id>/post/2012/07/20/title</id>
+   <id>https://nms-pr.github.io/post/2012/07/20/title</id>
    <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -35,9 +35,9 @@
  
  <entry>
    <title>Длинный пост</title>
-   <link href="/post/1900/01/15/long"/>
+   <link href="https://nms-pr.github.io/post/1900/01/15/long"/>
    <updated>1900-01-15T22:44:40+07:00</updated>
-   <id>/post/1900/01/15/long</id>
+   <id>https://nms-pr.github.io/post/1900/01/15/long</id>
    <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, dignissim ultrices a sit lacus. Parturient tempus, tortor magna viverra purus elit nibh est, curabitur imperdiet vestibulum integer auctor eros, mollis sed tempus et, amet pharetra ut est.
 &lt;!--more--&gt;&lt;/p&gt;
 
@@ -69,9 +69,9 @@
  
  <entry>
    <title>Внутри поста цифра - 1</title>
-   <link href="/post/0001/01/01/one"/>
+   <link href="https://nms-pr.github.io/post/0001/01/01/one"/>
    <updated>0001-01-01T00:54:40+07:00</updated>
-   <id>/post/0001/01/01/one</id>
+   <id>https://nms-pr.github.io/post/0001/01/01/one</id>
    <content type="html">&lt;p&gt;1&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -80,9 +80,9 @@
  
  <entry>
    <title>Просто оскорбительно...</title>
-   <link href="/post/0000/01/01/image"/>
+   <link href="https://nms-pr.github.io/post/0000/01/01/image"/>
    <updated>0000-01-01T00:54:40+07:00</updated>
-   <id>/post/0000/01/01/image</id>
+   <id>https://nms-pr.github.io/post/0000/01/01/image</id>
    <content type="html">&lt;p&gt;Внутри картинка&lt;/p&gt;
 
 &lt;!--more--&gt;
