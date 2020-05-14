@@ -46,6 +46,15 @@
     <main role="main" class="container-fluid p-3">
       
 
+<div class="toast" data-delay="3000" style="position: fixed; top:32px; right:32px; z-index:1;">
+  <div class="toast-header">
+    <strong class="mr-auto">Всем приветы в этом чате</strong>
+  </div>
+  <div class="toast-body">
+    Ссылка успешно скопирована
+  </div>
+</div>
+
 <div class="list-group">
   <li class="list-group-item">
     <h4> Заголовок с очень большим и длинным названием которые никуда не влезет </h4>
@@ -125,7 +134,7 @@
             </a>
           </li>
           <li class="list-inline-item">
-            <a href="mailto:?subject=Пост: Заголовок с очень большим и длинным названием которые никуда не влезет&amp;body=Посмотри эту интересную статью — https://nms-pr.github.io/post/2012/07/20/title"
+            <a href="mailto:?subject=Пост: Заголовок с очень большим и длинным названием которые никуда не влезет&amp;body=Посмотри эту статью — https://nms-pr.github.io/post/2012/07/20/title"
               title="Поделиться по email" target="_blank" rel="nofollow">
                 <img src="/images/icons/social/email.svg" width="20" height="20" />
             </a>
@@ -139,18 +148,15 @@
               <img id="copy" src="/images/icons/social/link.svg" />
               <script>
                 function copyLinkToClipboad() {
-                  var $temp = $("<input>");
-                  $("body").append($temp);
-                  $temp.val("https://nms-pr.github.io/post/2012/07/20/title").select();
-                  document.execCommand("copy");
+                  var $temp = $('<input>');
+                  $('body').append($temp);
+                  $temp.val('https://nms-pr.github.io/post/2012/07/20/title').select();
+                  document.execCommand('copy');
                   $temp.remove();
+                  $('.toast').toast('show');
                 }
               </script>
             </button>
-
-          </li>
-          <li class="list-inline-item" ">
-
           </li>
         </ul>
         <hr/>
@@ -250,10 +256,9 @@
   </div>
 </footer>
 
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 
   </body>
