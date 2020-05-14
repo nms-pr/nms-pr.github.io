@@ -51,6 +51,9 @@ reading_time:
   minute_singular: "минута"
   minute_plural: "минут"
 
+feed:
+  path: feed.xml
+
 # Build settings
 
 plugins:
