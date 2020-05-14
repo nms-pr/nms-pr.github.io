@@ -34,42 +34,6 @@ layout: default
     </p>
 
     <div class="card-group">
-      {% if page.next %}
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">{{ page.next.title  }}</h5>
-            <p class="text-muted">
-              <small>
-                <time datetime="{{ post.date | date_to_xmlschema }}">
-                  {{ page.next.date | localize: "%d %b %Y" }}
-                </time>
-                {% if page.next.type == 'text' %}
-
-                  &nbsp;|&nbsp;
-                  {{ page.next.content | reading_time }}
-
-                {% endif %}
-
-              {%- if page.next.tags.size > 0 -%}
-                  &nbsp;
-                  {% for tag in page.next.tags %}
-                    <a href="/tag/{{tag}}" class="badge badge-warning" role="button">
-                      {{tag}}
-                    </a>
-                  {% unless forloop.last %} &nbsp; {% endunless %}
-                {% endfor %}
-              {%- endif -%}
-              </small>
-            </p>
-
-            <p class="card-text">{{ page.next.excerpt }}</p>
-
-          </div>
-          <div class="card-footer">
-            <a href="{{ page.next.url }}" class="btn btn-primary">Следующий пост &#8594;</a>
-          </div>
-        </div>
-      {% endif %}
       {% if page.previous %}
       <div class="card">
         <div class="card-body">
@@ -106,6 +70,42 @@ layout: default
           <a href="{{ page.previous.url }}" class="btn btn-primary">&#8592; Предыдущий пост</a>
         </div>
       </div>
+      {% endif %}
+      {% if page.next %}
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ page.next.title  }}</h5>
+            <p class="text-muted">
+              <small>
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                  {{ page.next.date | localize: "%d %b %Y" }}
+                </time>
+                {% if page.next.type == 'text' %}
+
+                  &nbsp;|&nbsp;
+                  {{ page.next.content | reading_time }}
+
+                {% endif %}
+
+              {%- if page.next.tags.size > 0 -%}
+                  &nbsp;
+                  {% for tag in page.next.tags %}
+                    <a href="/tag/{{tag}}" class="badge badge-warning" role="button">
+                      {{tag}}
+                    </a>
+                  {% unless forloop.last %} &nbsp; {% endunless %}
+                {% endfor %}
+              {%- endif -%}
+              </small>
+            </p>
+
+            <p class="card-text">{{ page.next.excerpt }}</p>
+
+          </div>
+          <div class="card-footer">
+            <a href="{{ page.next.url }}" class="btn btn-primary">Следующий пост &#8594;</a>
+          </div>
+        </div>
       {% endif %}
     </div>
   </li>
