@@ -3,17 +3,12 @@ layout: default
 ---
 {% capture shared_link %}{{site.url}}{{site.baseurl}}{{page.url}}{% endcapture %}
 
-<div aria-live="polite" aria-atomic="true" style="position: relative; z-index: 1; min-height:200px;">
-  <div class="toast" style="position: absolute; top: 0; right: 0;">
-    <div class="toast-header">
-      <strong class="mr-auto">Bootstrap</strong>
-      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="toast-body">
-      Ссылка скопирована
-    </div>
+<div class="toast" data-delay="3000" style="position: fixed; top:32px; right:32px; z-index:1;">
+  <div class="toast-header">
+    <strong class="mr-auto">{{site.title}}</strong>
+  </div>
+  <div class="toast-body">
+    Ссылка успешно скопирована
   </div>
 </div>
 
@@ -97,11 +92,12 @@ layout: default
               <img id="copy" src="/images/icons/social/link.svg" />
               <script>
                 function copyLinkToClipboad() {
-                  var $temp = $("<input>");
-                  $("body").append($temp);
-                  $temp.val("{{shared_link}}").select();
-                  document.execCommand("copy");
+                  var $temp = $('<input>');
+                  $('body').append($temp);
+                  $temp.val('{{shared_link}}').select();
+                  document.execCommand('copy');
                   $temp.remove();
+                  $('.toast').toast('show');
                 }
               </script>
             </button>
