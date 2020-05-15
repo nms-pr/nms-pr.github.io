@@ -57,6 +57,9 @@ feed:
 
 # Build settings
 
+paginate: 10
+paginate_path: /posts/:num/
+
 plugins:
   - jekyll-feed
   - jekyll-paginate
