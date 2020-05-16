@@ -1,17 +1,13 @@
 ---
 layout: post
-title:  "Просто оскорбительно..."
-date:   0000-00-00 00:54:40 +0700
-tags: ['image', 'test']
-type: image
 
-tagline: Это картинка
+title:  "Просто оскорбительно..."
 description: Тяжёлая судьба менеджеров
-author: Интересный человек
-twitter:
-  card: summary
-lang: ru_RU
 image: /images/posts/0000-00-00-hello-sadly.jpg
+date:   0000-00-00 00:54:40 +0700
+
+type: text
+tags: ['image', 'test']
 ---
 
 Внутри картинка

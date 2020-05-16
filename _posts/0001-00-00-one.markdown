@@ -1,17 +1,13 @@
 ---
 layout: post
+
 title:  "Внутри поста цифра - 1"
+description: Три девицы думали, думали, и решили что-то сделать
+image: /images/posts/saltan.jpg
 date:   0001-00-00 00:54:40 +0700
+
 type: text
 tags: ['психология']
-
-tagline: Сказка о царе Салтане
-description: Три девицы думали, думали, и решили что-то сделать
-author: Пушкин
-twitter:
-  card: summary
-lang: ru_RU
-image: /images/posts/saltan.jpg
 ---
 
 Три девицы под окном

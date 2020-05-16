@@ -20,17 +20,32 @@
 
 title: Всем приветы в этом чате
 email: ""
-description: >- # this means to ignore newlines until "baseurl:"
-  Ставьте лайки, пишите комментарии, подписывайтесь на канал 🥳
 
 copyright: "© Mikhail 2020"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nms-pr.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-twitter_username:
-github_username:
-author: me
-lang: ru
+#seo--
+title: Всем приветы в этом чате
+description: >- # this means to ignore newlines until "baseurl:"
+  Ставьте лайки, пишите комментарии, подписывайтесь на канал 🥳
+
+author: Михаил Нечаев
+twitter:
+  card: summary
+lang: ru_RU
+social:
+  name: Михаил Нечаев
+  links:
+    - https://twitter.com/nms_pr
+    - https://www.facebook.com/nms.prm
+    - https://vk.com/nms_pr
+    - https://www.instagram.com/nms_pr/
+logo: /images/favicon.png
+webmaster_verifications:
+  google:
+  yandex:
+#--seo
 
 livereload: true
 

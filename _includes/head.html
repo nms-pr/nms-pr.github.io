@@ -15,13 +15,4 @@
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="sitemap" type="application/xml" title="sitemap" href="/sitemap.xml" />
-
-  {%- if jekyll.environment == 'production' -%}
-    {%- if site.google-analytics -%}
-      {%- include google-analytics.html -%}
-    {%- endif -%}
-    {%- if site.yandex-metrics -%}
-      {%- include yandex-metrics.html -%}
-    {%- endif -%}
-  {%- endif -%}
 </head>
