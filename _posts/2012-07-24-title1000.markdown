@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Тест 5"
+title:  "Тест 6"
 date:   2012-07-25 16:53:40 +0700
 type: text
 tags: ['копирайтинг', 'test']
