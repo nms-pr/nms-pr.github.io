@@ -4,10 +4,18 @@ title:  "Просто оскорбительно..."
 date:   0000-00-00 00:54:40 +0700
 tags: ['image', 'test']
 type: image
+
+tagline: Это картинка
+description: Тяжёлая судьба менеджеров
+author: Интересный человек
+twitter:
+  card: summary
+lang: ru_RU
+image: /images/posts/0000-00-00-hello-sadly.jpg
 ---
 
 Внутри картинка
 
 <!--more-->
 
-![Вот так](/images/0000-00-00-hello-sadly.jpg){:height="100%" width="100%"}
+![Вот так](/images/posts/0000-00-00-hello-sadly.jpg){:height="100%" width="100%"}
