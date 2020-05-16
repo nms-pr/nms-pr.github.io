@@ -1,0 +1,61 @@
+<div class="toast" data-delay="3000" style="position: fixed; top:32px; right:32px; z-index:1;">
+  <div class="toast-header">
+    <strong class="mr-auto">{{site.title}}</strong>
+  </div>
+  <div class="toast-body">
+    Ссылка успешно скопирована
+  </div>
+</div>
+{% capture shared_link %}{{site.url}}{{site.baseurl}}{{page.url}}{% endcapture %}
+<div class="share-bar">
+  <ul class="list-inline">
+    <li class="list-inline-item">
+      Поделиться:
+    </li>
+    <li class="list-inline-item">
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{shared_link}}" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Поделиться в facebook" rel="nofollow">
+        <img src="/images/icons/social/facebook.svg" width="20" height="20" />
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{shared_link}}" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Поделиться в twitter"
+        rel="nofollow">
+        <img src="/images/icons/social/twitter.svg" width="20" height="20" />
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://vk.com/share.php?title={{ page.title }}&url={{shared_link}}" title="Поделиться в vk" target="_blank" rel="nofollow">
+        <img src="/images/icons/social/vk.svg" width="20" height="20" />
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://connect.ok.ru/offer?title={{page.title}}&url={{shared_link}}" title="Поделиться в ok" target="_blank" rel="nofollow">
+        <img src="/images/icons/social/ok.svg" width="20" height="20" />
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="mailto:?subject=Пост: {{page.title}}&body=Посмотри эту статью — {{shared_link}}" title="Поделиться по email" target="_blank" rel="nofollow">
+        <img src="/images/icons/social/email.svg" width="20" height="20" />
+      </a>
+    </li>
+  </ul>
+  <ul class="list-inline">
+    <li class="list-inline-item">
+      <button type="button" class="btn btn-outline-dark" title="{{shared_link}}" onclick="copyLinkToClipboad()">
+        Скопировать ссылку
+        <img id="copy" src="/images/icons/social/link.svg" />
+        <script>
+          function copyLinkToClipboad() {
+            var $temp = $('<input>');
+            $('body').append($temp);
+            $temp.val('{{shared_link}}').select();
+            document.execCommand('copy');
+            $temp.remove();
+            $('.toast').toast('show');
+          }
+        </script>
+      </button>
+    </li>
+  </ul>
+  <hr />
+</div>

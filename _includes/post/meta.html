@@ -1,0 +1,22 @@
+<small>
+  <time datetime="{{ ctx.date | date_to_xmlschema }}">
+    {{ ctx.date | localize: "%d %b %Y" }}
+  </time>
+
+  &nbsp;|&nbsp;
+  {% if ctx.reading_min %}
+    {{ ctx.reading_min | convert_reading_min }}
+  {% else %}
+    {{ ctx.content | reading_time }}
+  {% endif %}
+
+  {%- if ctx.tags.size > 0 -%}
+    &nbsp;
+    {% for tag in ctx.tags %}
+      <a href="/tag/{{tag}}" class="badge badge-warning" role="button">
+        {{tag}}
+      </a>
+    {% unless forloop.last %} &nbsp; {% endunless %}
+    {% endfor %}
+  {%- endif -%}
+</small>

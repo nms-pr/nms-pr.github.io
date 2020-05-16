@@ -1,0 +1,84 @@
+<!--
+  Семь ячеек + 2 стрелочки
+  Если страниц <= 7, то рисуются все
+--!>
+<nav aria-label="page navigation" class="p-3">
+  <ul class="pagination justify-content-center">
+    {% if paginator.previous_page %}
+      <li class="page-item">
+    {% else %}
+      <li class="page-item disabled">
+    {% endif %}
+      <a class="page-link" href="{{ paginator.previous_page_path }}" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item {%if paginator.page==1%}active{%endif%}"><a class="page-link" href="/">1</a></li>
+
+    <!-- 0 --!>
+    <!-- [  1  |  2  |  3  |  4  |  5  |  6  |  7  ] --!>
+    {% if paginator.total_pages <= 7 %}
+      {% for page in (2..paginator.total_pages) %}
+        <li class="page-item {%if paginator.page==page%}active{%endif%}"><a class="page-link" href="/posts/{{page}}">{{page}}</a></li>
+      {% endfor %}
+    {% else %}
+
+      <!-- 1 --!>
+      <!-- [  `1 |  2  |  3  |  4  |  5  |  ... | 8(N)] --!>
+      <!-- [   1 | `2  |  3  |  4  |  5  |  ... | 8(N)] --!>
+      <!-- [   1 |  2  | `3  |  4  |  5  |  ... | 8(N)] --!>
+
+      {% if paginator.page < 4 %}
+        {% for page in (2..5) %}
+          <li class="page-item {%if paginator.page==page%}active{%endif%}"><a class="page-link" href="/posts/{{page}}">{{page}}</a></li>
+        {% endfor %}
+        <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+      {% endif %}
+
+      {% assign lasttotal = paginator.total_pages | minus: 4 %}
+
+      <!-- 2 --!>
+      <!-- [   1 | ... | 3  |  `4  |  5  |  ... | 8(N)] --!>
+
+      {% if paginator.page >= 4 and paginator.page <= lasttotal %}
+        <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+
+        {% assign firstcurrent = paginator.page | minus: 1 %}
+        {% assign lastcurrent = paginator.page | plus: 1 %}
+        {% for page in (firstcurrent..lastcurrent) %}
+          <li class="page-item {%if paginator.page==page%}active{%endif%}"><a class="page-link" href="/posts/{{page}}">{{page}}</a></li>
+        {% endfor %}
+
+        <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+      {% endif %}
+
+      <!-- 3 --!>
+      <!-- [  1 |  ... |  4  | `5  |  6  |  7  | 8(N)] --!>
+      <!-- [  1 |  ... |  4  |  5  | `6  |  7  | 8(N)] --!>
+      <!-- [  1 |  ... |  4  |  5  |  6  | `7  | 8(N)] --!>
+      <!-- [  1 |  ... |  4  |  5  |  6  |  7  |`8(N)] --!>
+
+      {% if paginator.page > lasttotal %}
+        <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+
+        {% assign prevtotal = paginator.total_pages | minus: 1 %}
+        {% for page in (lasttotal..prevtotal) %}
+          <li class="page-item {%if paginator.page==page%}active{%endif%}"><a class="page-link" href="/posts/{{page}}">{{page}}</a></li>
+        {% endfor %}
+
+      {% endif %}
+
+      <li class="page-item {%if paginator.page==paginator.total_pages%}active{%endif%}"><a class="page-link" href="/posts/{{paginator.total_pages}}">{{paginator.total_pages}}</a></li>
+    {% endif %}
+
+    {% if paginator.next_page %}
+      <li class="page-item">
+    {% else %}
+      <li class="page-item disabled">
+    {% endif %}
+      <a class="page-link" href="{{ paginator.next_page_path }}" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ ctx.title }}</h5>
+    <p class="text-muted">
+      {% include post/meta.html %}
+    </p>
+    <p class="card-text">{{ ctx.excerpt }}</p>
+  </div>
+  <div class="card-footer">
+    <a href="{{ ctx.url }}" class="btn btn-primary">{{btitle}}</a>
+  </div>
+</div>

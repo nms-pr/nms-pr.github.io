@@ -1,184 +1,29 @@
 ---
 layout: default
 ---
-{% capture shared_link %}{{site.url}}{{site.baseurl}}{{page.url}}{% endcapture %}
-
-<div class="toast" data-delay="3000" style="position: fixed; top:32px; right:32px; z-index:1;">
-  <div class="toast-header">
-    <strong class="mr-auto">{{site.title}}</strong>
-  </div>
-  <div class="toast-body">
-    Ссылка успешно скопирована
-  </div>
-</div>
-
 <div class="list-group">
   <li class="list-group-item">
     <h4> {{ page.title }} </h4>
-
     <p class="text-muted">
-      <small>
-        <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ page.date | localize: "%d %b %Y" }}
-        </time>
-        &nbsp;|&nbsp;
-        {% if page.reading_min %}
-          {{ page.reading_min | convert_reading_min }}
-        {% else %}
-          {{ page.content | reading_time }}
-        {% endif %}
-
-      {%- if page.tags.size > 0 -%}
-          &nbsp;
-          {% for tag in page.tags %}
-            <a href="/tag/{{tag}}" class="badge badge-warning" role="button">
-              {{tag}}
-            </a>
-          {% unless forloop.last %} &nbsp; {% endunless %}
-        {% endfor %}
-      {%- endif -%}
-      </small>
+      {% assign ctx=page %}
+      {% include post/meta.html %}
     </p>
-
     <p>
       {{ content }}
     </p>
-
     <div class="footer">
-      <hr/>
-      <div class="share-bar">
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            Поделиться:
-          </li>
-          <li class="list-inline-item">
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{shared_link}}"
-              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-              title="Поделиться в facebook" rel="nofollow">
-                <img src="/images/icons/social/facebook.svg" width="20" height="20"/>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{shared_link}}"
-              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-              title="Поделиться в twitter" rel="nofollow">
-                <img src="/images/icons/social/twitter.svg" width="20" height="20"/>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://vk.com/share.php?title={{ page.title }}&url={{shared_link}}"
-              title="Поделиться в vk" target="_blank" rel="nofollow">
-                <img src="/images/icons/social/vk.svg" width="20" height="20" />
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://connect.ok.ru/offer?title={{ page.title }}&url={{shared_link}}"
-              title="Поделиться в ok" target="_blank" rel="nofollow">
-                <img src="/images/icons/social/ok.svg" width="20" height="20" />
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="mailto:?subject=Пост: {{ page.title }}&amp;body=Посмотри эту статью — {{shared_link}}"
-              title="Поделиться по email" target="_blank" rel="nofollow">
-                <img src="/images/icons/social/email.svg" width="20" height="20" />
-            </a>
-          </li>
-        </ul>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <button type="button" class="btn btn-outline-dark"
-              title="{{shared_link}}" onclick="copyLinkToClipboad()">
-              Скопировать ссылку
-              <img id="copy" src="/images/icons/social/link.svg" />
-              <script>
-                function copyLinkToClipboad() {
-                  var $temp = $('<input>');
-                  $('body').append($temp);
-                  $temp.val('{{shared_link}}').select();
-                  document.execCommand('copy');
-                  $temp.remove();
-                  $('.toast').toast('show');
-                }
-              </script>
-            </button>
-          </li>
-        </ul>
-        <hr/>
-      </div>
-
+      <hr />
+      {% include post/share_bar.html %}
       <div class="card-group">
         {% if page.previous %}
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">{{ page.previous.title }}</h5>
-
-                <p class="text-muted">
-                  <small>
-                    <time datetime="{{ post.date | date_to_xmlschema }}">
-                      {{ page.previous.date | localize: "%d %b %Y" }}
-                    </time>
-                    {% if page.previous.type == 'text' %}
-
-                      &nbsp;|&nbsp;
-                      {{ page.previous.content | reading_time }}
-
-                    {% endif %}
-
-                  {%- if page.previous.tags.size > 0 -%}
-                      &nbsp;
-                      {% for tag in page.previous.tags %}
-                        <a href="/tag/{{tag}}" class="badge badge-warning" role="button">
-                          {{tag}}
-                        </a>
-                      {% unless forloop.last %} &nbsp; {% endunless %}
-                    {% endfor %}
-                  {%- endif -%}
-                  </small>
-                </p>
-
-                <p class="card-text">{{ page.previous.excerpt }}</p>
-
-          </div>
-          <div class="card-footer">
-            <a href="{{ page.previous.url }}" class="btn btn-primary">&#8592; Предыдущий пост</a>
-          </div>
-        </div>
+          {% assign ctx=page.previous %}
+          {% assign btitle="&#8592; Предыдущий пост" %}
+          {% include post/recommend_post_card.html %}
         {% endif %}
         {% if page.next %}
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">{{ page.next.title  }}</h5>
-              <p class="text-muted">
-                <small>
-                  <time datetime="{{ post.date | date_to_xmlschema }}">
-                    {{ page.next.date | localize: "%d %b %Y" }}
-                  </time>
-                  {% if page.next.type == 'text' %}
-
-                    &nbsp;|&nbsp;
-                    {{ page.next.content | reading_time }}
-
-                  {% endif %}
-
-                {%- if page.next.tags.size > 0 -%}
-                    &nbsp;
-                    {% for tag in page.next.tags %}
-                      <a href="/tag/{{tag}}" class="badge badge-warning" role="button">
-                        {{tag}}
-                      </a>
-                    {% unless forloop.last %} &nbsp; {% endunless %}
-                  {% endfor %}
-                {%- endif -%}
-                </small>
-              </p>
-
-              <p class="card-text">{{ page.next.excerpt }}</p>
-
-            </div>
-            <div class="card-footer">
-              <a href="{{ page.next.url }}" class="btn btn-primary">Следующий пост &#8594;</a>
-            </div>
-          </div>
+          {% assign ctx=page.next %}
+          {% assign btitle="Следующий пост &#8594;" %}
+          {% include post/recommend_post_card.html %}
         {% endif %}
       </div>
     </div>

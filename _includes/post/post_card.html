@@ -1,0 +1,15 @@
+<li class="list-group-item">
+  <h4>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="text-dark">
+      {{ post.title }}
+    </a>
+  </h4>
+  <p class="text-muted">
+    {% assign ctx=post %}
+    {% include post/meta.html %}
+  </p>
+  <p>
+    {{ post.excerpt }}
+  </p>
+  <a class="btn btn-outline-secondary" href="{{ site.baseurl }}{{ post.url }}" role="button">Читать далее</a>
+</li>

@@ -65,8 +65,6 @@ extlinks:
 feed:
   path: feed.xml
 
-# Build settings
-
 paginate: 10
 paginate_path: /posts/:num/
 
