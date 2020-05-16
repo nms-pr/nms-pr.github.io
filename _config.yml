@@ -33,6 +33,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 author: Михаил Нечаев
 twitter:
   card: summary
+  username: nms_pr
 lang: ru_RU
 social:
   name: Михаил Нечаев
