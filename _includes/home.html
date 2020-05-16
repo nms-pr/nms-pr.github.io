@@ -18,11 +18,12 @@
           <time datetime="{{ post.date | date_to_xmlschema }}">
             {{ post.date | localize: "%d %b %Y" }}
           </time>
-          {% if post.type == 'text' %}
 
-            &nbsp;|&nbsp;
+          &nbsp;|&nbsp;
+          {% if post.reading_min %}
+            {{ post.reading_min | convert_reading_min }}
+          {% else %}
             {{ post.content | reading_time }}
-
           {% endif %}
 
         {%- if post.tags.size > 0 -%}

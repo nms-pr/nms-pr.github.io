@@ -21,11 +21,11 @@ layout: default
         <time datetime="{{ post.date | date_to_xmlschema }}">
           {{ page.date | localize: "%d %b %Y" }}
         </time>
-        {% if page.type == 'text' %}
-
-          &nbsp;|&nbsp;
+        &nbsp;|&nbsp;
+        {% if page.reading_min %}
+          {{ page.reading_min | convert_reading_min }}
+        {% else %}
           {{ page.content | reading_time }}
-
         {% endif %}
 
       {%- if page.tags.size > 0 -%}

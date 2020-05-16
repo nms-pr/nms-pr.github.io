@@ -3,7 +3,8 @@ layout: post
 title:  "Тест 6"
 date:   2012-07-25 16:53:40 +0700
 type: text
-tags: ['копирайтинг', 'test']
+tags: ['копирайтинг', 'test2']
+reading_min: 123
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
