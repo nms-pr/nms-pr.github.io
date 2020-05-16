@@ -7,10 +7,9 @@ module ReadingTimeFilter
     # Average reading words per minute.
     words_per_minute = 180
     # Calculate reading time.
-    case total_words
-    when 0 .. 89
+    if total_words < 90
       minutes = 0
-    when 90 .. 269
+    elsif total_words < 270
       minutes = 1
     else
       minutes = (total_words / words_per_minute ).floor
